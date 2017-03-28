@@ -9,10 +9,20 @@ var __extends = (this && this.__extends) || function (d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
 var React = require('react');
-var bookcomponent_1 = require('../components/book-component/bookcomponent');
-var bookdetailcomponent_1 = require('../components/book-detail-component/bookdetailcomponent');
 var stockcomponent_1 = require('../components/stock-component/stockcomponent');
-var loadingalertcomponent_1 = require('../components/loading-alert-component/loadingalertcomponent');
+//export class App extends React.Component<any, {}> {
+//    render(){
+//        return(<div>
+//            <BookComponent />
+//            <BookDetailComponent />
+//            <StockComponent ticket="GOOGL" />
+//            <StockComponent ticket="MSFT" />
+//            <StockComponent ticket="CSCO" />
+//            <StockComponent ticket="GWZ" />
+//            <LoadingAlertComponent />
+//                </div>);
+//    }
+//}
 var App = (function (_super) {
     __extends(App, _super);
     function App() {
@@ -20,12 +30,10 @@ var App = (function (_super) {
     }
     App.prototype.render = function () {
         return (React.createElement("div", null, 
-            React.createElement(bookcomponent_1.default, null), 
-            React.createElement(bookdetailcomponent_1.default, null), 
             React.createElement(stockcomponent_1.StockComponent, {ticket: "GOOGL"}), 
             React.createElement(stockcomponent_1.StockComponent, {ticket: "MSFT"}), 
             React.createElement(stockcomponent_1.StockComponent, {ticket: "CSCO"}), 
-            React.createElement(loadingalertcomponent_1.LoadingAlertComponent, null)));
+            React.createElement(stockcomponent_1.StockComponent, {ticket: "GWZ"})));
     };
     return App;
 }(React.Component));

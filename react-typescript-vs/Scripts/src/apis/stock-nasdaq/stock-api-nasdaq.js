@@ -8,7 +8,7 @@ function GetStockPrice(ticket) {
         // becuase payload bellow was an string..
         return { type: actiontypes_1.ActionType.WEATHER_FETCH_SUCCESS, payload: JSON.parse(r.data.substr(3)) };
     }, function (e) {
-        return { type: actiontypes_1.ActionType.WEATHER_FETCH_FAILURE, error: e.error };
+        return { type: actiontypes_1.ActionType.WEATHER_FETCH_FAILURE, error: e };
     });
 }
 exports.GetStockPrice = GetStockPrice;

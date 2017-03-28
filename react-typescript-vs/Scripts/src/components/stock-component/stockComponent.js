@@ -11,6 +11,7 @@ var React = require('react');
 var stock_api_nasdaq_1 = require('../../apis/stock-nasdaq/stock-api-nasdaq');
 var stock_view_1 = require('./view/stock-view');
 var loadingalertcomponent_1 = require('../loading-alert-component/loadingalertcomponent');
+var errorcomponent_1 = require('../error-component/errorcomponent');
 var StockComponent = (function (_super) {
     __extends(StockComponent, _super);
     function StockComponent(props) {
@@ -38,8 +39,18 @@ var StockComponent = (function (_super) {
     };
     StockComponent.prototype.render = function () {
         if (this.state.IsWorking) {
-            //return (<div>Loading...</div>);
             return (React.createElement(loadingalertcomponent_1.LoadingAlertComponent, null));
+        }
+        if (!!this.state.error) {
+            return (React.createElement(errorcomponent_1.ErrorComponent, null, 
+                React.createElement("span", null, 
+                    "Look dude, The stock ", 
+                    React.createElement("b", null, 
+                        this.props.ticket, 
+                        " "), 
+                    " is not in the Exchange: ", 
+                    React.createElement("b", null, "NASDAQ"))
+            ));
         }
         return stock_view_1.StockViews.GetView(this.state.stockInfo[0]);
     };

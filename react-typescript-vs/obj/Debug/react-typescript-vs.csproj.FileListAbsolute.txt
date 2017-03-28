@@ -5,3 +5,9 @@ C:\apps\ReactExams\reactTypescriptVs\reactTypescriptVs\react-typescript-vs\bin\r
 C:\apps\ReactExams\reactTypescriptVs\reactTypescriptVs\react-typescript-vs\bin\react-typescript-vs.pdb
 C:\apps\ReactExams\reactTypescriptVs\reactTypescriptVs\react-typescript-vs\obj\Debug\react-typescript-vs.dll
 C:\apps\ReactExams\reactTypescriptVs\reactTypescriptVs\react-typescript-vs\obj\Debug\react-typescript-vs.pdb
+C:\git-personal\react-vs\react-typescript-vs\bin\react-typescript-vs.dll.config
+C:\git-personal\react-vs\react-typescript-vs\bin\react-typescript-vs.dll
+C:\git-personal\react-vs\react-typescript-vs\bin\react-typescript-vs.pdb
+C:\git-personal\react-vs\react-typescript-vs\obj\Debug\react-typescript-vs.csprojResolveAssemblyReference.cache
+C:\git-personal\react-vs\react-typescript-vs\obj\Debug\react-typescript-vs.dll
+C:\git-personal\react-vs\react-typescript-vs\obj\Debug\react-typescript-vs.pdb
