@@ -1,0 +1,7 @@
+C:\apps\ReactExams\react-typescript-vs\react-typescript-vs\react-typescript-vs\obj\Debug\react-typescript-vs.csprojResolveAssemblyReference.cache
+C:\apps\ReactExams\reactTypescriptVs\reactTypescriptVs\react-typescript-vs\obj\Debug\react-typescript-vs.csprojResolveAssemblyReference.cache
+C:\apps\ReactExams\reactTypescriptVs\reactTypescriptVs\react-typescript-vs\bin\react-typescript-vs.dll.config
+C:\apps\ReactExams\reactTypescriptVs\reactTypescriptVs\react-typescript-vs\bin\react-typescript-vs.dll
+C:\apps\ReactExams\reactTypescriptVs\reactTypescriptVs\react-typescript-vs\bin\react-typescript-vs.pdb
+C:\apps\ReactExams\reactTypescriptVs\reactTypescriptVs\react-typescript-vs\obj\Debug\react-typescript-vs.dll
+C:\apps\ReactExams\reactTypescriptVs\reactTypescriptVs\react-typescript-vs\obj\Debug\react-typescript-vs.pdb

@@ -1,0 +1,1 @@
+{"version":3,"file":"book-detail-action.js","sourceRoot":"","sources":["../../../src/actions/book-detail-action.ts"],"names":[],"mappings":";AAIA,4BAA2B,sBAAsB,CAAC,CAAA;AAClD,oBAA2B,IAAY;IAEnC,OAAO,CAAC,GAAG,CAAC,IAAI,CAAC,CAAC;IAClB,MAAM,CAAC;QACH,IAAI,EAAE,wBAAU,CAAC,WAAW;QAC5B,OAAO,EAAE,IAAI;KAChB,CAAA;AACL,CAAC;AAPe,kBAAU,aAOzB,CAAA"}
