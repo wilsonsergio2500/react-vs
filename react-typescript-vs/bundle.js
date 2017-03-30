@@ -21914,7 +21914,7 @@
 /* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/// <reference path="../components/loading-alert-component/loadingalertcomponent.tsx" />
+	/// <reference path="../components/repeater-component/test.tsx" />
 	// A '.tsx' file enables JSX support in the TypeScript compiler, 
 	// for more information see the following page on the TypeScript wiki:
 	// https://github.com/Microsoft/TypeScript/wiki/JSX
@@ -21932,12 +21932,14 @@
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var React = __webpack_require__(1);
 	var stockcomponent_1 = __webpack_require__(206);
+	var test_1 = __webpack_require__(491);
+	var test_2 = __webpack_require__(497);
 	//export class App extends React.Component<any, {}> {
 	//    render(){
 	//        return(<div>
 	//            <BookComponent />
 	//            <BookDetailComponent />
-	//            <StockComponent ticket="GOOGL" />
+	//            <StockComponent ticket="GOOGL" />                                     
 	//            <StockComponent ticket="MSFT" />
 	//            <StockComponent ticket="CSCO" />
 	//            <StockComponent ticket="GWZ" />
@@ -21955,7 +21957,9 @@
 	            React.createElement(stockcomponent_1.StockComponent, { ticket: "GOOGL" }),
 	            React.createElement(stockcomponent_1.StockComponent, { ticket: "MSFT" }),
 	            React.createElement(stockcomponent_1.StockComponent, { ticket: "CSCO" }),
-	            React.createElement(stockcomponent_1.StockComponent, { ticket: "GWZ" })));
+	            React.createElement(stockcomponent_1.StockComponent, { ticket: "GWZ" }),
+	            React.createElement(test_2.RepeaterTest, null),
+	            React.createElement(test_1.LoadingButtonTest, null)));
 	    };
 	    return App;
 	}(React.Component));
@@ -42911,6 +42915,322 @@
 	exports.bootstrapUtils = _bootstrapUtils;
 	exports.createChainedFunction = _createChainedFunction3['default'];
 	exports.ValidComponentChildren = _ValidComponentChildren3['default'];
+
+/***/ },
+/* 491 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/// <reference path="index.tsx" />
+	// A '.tsx' file enables JSX support in the TypeScript compiler, 
+	// for more information see the following page on the TypeScript wiki:
+	// https://github.com/Microsoft/TypeScript/wiki/JSX
+	"use strict";
+	var __extends = (this && this.__extends) || (function () {
+	    var extendStatics = Object.setPrototypeOf ||
+	        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+	        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+	    return function (d, b) {
+	        extendStatics(d, b);
+	        function __() { this.constructor = d; }
+	        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	    };
+	})();
+	Object.defineProperty(exports, "__esModule", { value: true });
+	var React = __webpack_require__(1);
+	var index_1 = __webpack_require__(492);
+	var LoadingButtonTest = (function (_super) {
+	    __extends(LoadingButtonTest, _super);
+	    function LoadingButtonTest() {
+	        return _super !== null && _super.apply(this, arguments) || this;
+	    }
+	    LoadingButtonTest.prototype.componentWillMount = function () {
+	        this.setState({ gotBusy: false });
+	    };
+	    LoadingButtonTest.prototype.OnClick = function () {
+	        console.log('you clicked me', 'I am on parent');
+	        this.setState({
+	            gotBusy: true
+	        });
+	        var that = this;
+	        setTimeout(function () {
+	            that.setState({ gotBusy: false });
+	        }, 8000);
+	    };
+	    LoadingButtonTest.prototype.render = function () {
+	        var _this = this;
+	        return (React.createElement(index_1.LoadingButton, { buttonClass: "btn btn-primary", type: "button", IsWorking: this.state.gotBusy, OnClick: function () { return _this.OnClick(); } },
+	            React.createElement(index_1.BtnMesage, null, "Update"),
+	            React.createElement(index_1.BtnLoadingMessage, null, "Loading..")));
+	    };
+	    return LoadingButtonTest;
+	}(React.Component));
+	exports.LoadingButtonTest = LoadingButtonTest;
+
+
+/***/ },
+/* 492 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// A '.tsx' file enables JSX support in the TypeScript compiler, 
+	// for more information see the following page on the TypeScript wiki:
+	// https://github.com/Microsoft/TypeScript/wiki/JSX
+	"use strict";
+	Object.defineProperty(exports, "__esModule", { value: true });
+	var loadingbuttoncomponent_1 = __webpack_require__(493);
+	var buttonmessage_1 = __webpack_require__(494);
+	var buttonloadingmessage_1 = __webpack_require__(496);
+	exports.LoadingButton = loadingbuttoncomponent_1.LoadingButtonComponent;
+	exports.BtnMesage = buttonmessage_1.ButtonMessage;
+	exports.BtnLoadingMessage = buttonloadingmessage_1.ButtonLoadingMessage;
+
+
+/***/ },
+/* 493 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// A '.tsx' file enables JSX support in the TypeScript compiler, 
+	// for more information see the following page on the TypeScript wiki:
+	// https://github.com/Microsoft/TypeScript/wiki/JSX
+	"use strict";
+	var __extends = (this && this.__extends) || (function () {
+	    var extendStatics = Object.setPrototypeOf ||
+	        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+	        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+	    return function (d, b) {
+	        extendStatics(d, b);
+	        function __() { this.constructor = d; }
+	        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	    };
+	})();
+	Object.defineProperty(exports, "__esModule", { value: true });
+	var React = __webpack_require__(1);
+	var LoadingButtonComponent = (function (_super) {
+	    __extends(LoadingButtonComponent, _super);
+	    function LoadingButtonComponent() {
+	        return _super !== null && _super.apply(this, arguments) || this;
+	    }
+	    LoadingButtonComponent.prototype.getComponents = function (busy) {
+	        var children = this.props.children.map(function (item, index) {
+	            return React.cloneElement(item, { IsWorking: busy, key: index });
+	        });
+	        return children;
+	    };
+	    LoadingButtonComponent.prototype.render = function () {
+	        return (React.createElement("button", { type: this.props.type, className: this.props.buttonClass, disabled: this.props.IsWorking, onClick: this.props.OnClick }, this.getComponents(this.props.IsWorking)));
+	    };
+	    return LoadingButtonComponent;
+	}(React.Component));
+	exports.LoadingButtonComponent = LoadingButtonComponent;
+
+
+/***/ },
+/* 494 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// A '.tsx' file enables JSX support in the TypeScript compiler, 
+	// for more information see the following page on the TypeScript wiki:
+	// https://github.com/Microsoft/TypeScript/wiki/JSX
+	"use strict";
+	var __extends = (this && this.__extends) || (function () {
+	    var extendStatics = Object.setPrototypeOf ||
+	        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+	        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+	    return function (d, b) {
+	        extendStatics(d, b);
+	        function __() { this.constructor = d; }
+	        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	    };
+	})();
+	Object.defineProperty(exports, "__esModule", { value: true });
+	var React = __webpack_require__(1);
+	var reactshow_1 = __webpack_require__(495);
+	var ButtonMessage = (function (_super) {
+	    __extends(ButtonMessage, _super);
+	    function ButtonMessage() {
+	        return _super !== null && _super.apply(this, arguments) || this;
+	    }
+	    ButtonMessage.prototype.render = function () {
+	        var NotWorking = (this.props.IsWorking == false);
+	        return (React.createElement(reactshow_1.ReactShow, { show: NotWorking },
+	            React.createElement("span", null, this.props.children)));
+	    };
+	    return ButtonMessage;
+	}(React.Component));
+	exports.ButtonMessage = ButtonMessage;
+
+
+/***/ },
+/* 495 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __extends = (this && this.__extends) || (function () {
+	    var extendStatics = Object.setPrototypeOf ||
+	        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+	        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+	    return function (d, b) {
+	        extendStatics(d, b);
+	        function __() { this.constructor = d; }
+	        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	    };
+	})();
+	Object.defineProperty(exports, "__esModule", { value: true });
+	// A '.tsx' file enables JSX support in the TypeScript compiler, 
+	// for more information see the following page on the TypeScript wiki:
+	// https://github.com/Microsoft/TypeScript/wiki/JSX
+	var React = __webpack_require__(1);
+	var ReactShow = (function (_super) {
+	    __extends(ReactShow, _super);
+	    function ReactShow() {
+	        return _super !== null && _super.apply(this, arguments) || this;
+	    }
+	    ReactShow.prototype.componentWillUnmount = function () {
+	    };
+	    ReactShow.prototype.componentWillReceiveProps = function (nextprop) {
+	    };
+	    ReactShow.prototype.render = function () {
+	        return React.cloneElement(this.props.children, { className: ((!!this.props.show) ? 'show' : 'hide') });
+	    };
+	    return ReactShow;
+	}(React.Component));
+	exports.ReactShow = ReactShow;
+
+
+/***/ },
+/* 496 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// A '.tsx' file enables JSX support in the TypeScript compiler,
+	// for more information see the following page on the TypeScript wiki:
+	// https://github.com/Microsoft/TypeScript/wiki/JSX
+	"use strict";
+	var __extends = (this && this.__extends) || (function () {
+	    var extendStatics = Object.setPrototypeOf ||
+	        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+	        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+	    return function (d, b) {
+	        extendStatics(d, b);
+	        function __() { this.constructor = d; }
+	        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	    };
+	})();
+	Object.defineProperty(exports, "__esModule", { value: true });
+	var React = __webpack_require__(1);
+	var reactshow_1 = __webpack_require__(495);
+	var ButtonLoadingMessage = (function (_super) {
+	    __extends(ButtonLoadingMessage, _super);
+	    function ButtonLoadingMessage() {
+	        return _super !== null && _super.apply(this, arguments) || this;
+	    }
+	    ButtonLoadingMessage.prototype.render = function () {
+	        var NotWorking = (this.props.IsWorking == false);
+	        return (React.createElement(reactshow_1.ReactShow, { show: this.props.IsWorking },
+	            React.createElement("span", null,
+	                this.props.children,
+	                React.createElement("i", { className: "fa fa-spinner fa-spin" }))));
+	    };
+	    return ButtonLoadingMessage;
+	}(React.Component));
+	exports.ButtonLoadingMessage = ButtonLoadingMessage;
+
+
+/***/ },
+/* 497 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// A '.tsx' file enables JSX support in the TypeScript compiler, 
+	// for more information see the following page on the TypeScript wiki:
+	// https://github.com/Microsoft/TypeScript/wiki/JSX
+	"use strict";
+	var __extends = (this && this.__extends) || (function () {
+	    var extendStatics = Object.setPrototypeOf ||
+	        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+	        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+	    return function (d, b) {
+	        extendStatics(d, b);
+	        function __() { this.constructor = d; }
+	        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	    };
+	})();
+	Object.defineProperty(exports, "__esModule", { value: true });
+	var React = __webpack_require__(1);
+	var book_reducer_1 = __webpack_require__(200);
+	var reactrepeatercomponent_1 = __webpack_require__(498);
+	var RepeaterTest = (function (_super) {
+	    __extends(RepeaterTest, _super);
+	    function RepeaterTest() {
+	        return _super !== null && _super.apply(this, arguments) || this;
+	    }
+	    RepeaterTest.prototype.repeatHandler = function (book, index) {
+	        return (React.createElement("div", { className: "col-md-3", key: index }, book.title));
+	    };
+	    RepeaterTest.prototype.render = function () {
+	        var array = book_reducer_1.BookReducer.ReducerFunction();
+	        return (React.createElement("div", { className: "container" },
+	            React.createElement("div", { className: "" },
+	                React.createElement("code", null,
+	                    "The below is data from a ",
+	                    React.createElement("b", null, "Repeater"),
+	                    ", like ",
+	                    React.createElement("b", null, "ngRepeat:"))),
+	            React.createElement("div", { className: "col-md-112" },
+	                React.createElement(reactrepeatercomponent_1.ReactRepeater, { array: array, ParentTag: "div", ParentTagClass: "row", RepeatItemHandler: this.repeatHandler }))));
+	    };
+	    return RepeaterTest;
+	}(React.Component));
+	exports.RepeaterTest = RepeaterTest;
+
+
+/***/ },
+/* 498 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/// <reference path="../book-component/reducer/book-reducer.ts" />
+	// A '.tsx' file enables JSX support in the TypeScript compiler, 
+	// for more information see the following page on the TypeScript wiki:
+	// https://github.com/Microsoft/TypeScript/wiki/JSX
+	"use strict";
+	var __extends = (this && this.__extends) || (function () {
+	    var extendStatics = Object.setPrototypeOf ||
+	        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+	        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+	    return function (d, b) {
+	        extendStatics(d, b);
+	        function __() { this.constructor = d; }
+	        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+	    };
+	})();
+	Object.defineProperty(exports, "__esModule", { value: true });
+	var React = __webpack_require__(1);
+	var ParentTag = (function (_super) {
+	    __extends(ParentTag, _super);
+	    function ParentTag(props) {
+	        var _this = _super.call(this, props) || this;
+	        _this.state = { TagName: _this.props.TagName };
+	        return _this;
+	    }
+	    ParentTag.prototype.render = function () {
+	        return (React.createElement(this.state.TagName, null, this.props.children));
+	    };
+	    return ParentTag;
+	}(React.Component));
+	exports.ParentTag = ParentTag;
+	var ReactRepeater = (function (_super) {
+	    __extends(ReactRepeater, _super);
+	    function ReactRepeater() {
+	        return _super !== null && _super.apply(this, arguments) || this;
+	    }
+	    ReactRepeater.prototype.getList = function () {
+	        var resolvedArray = this.props.array.map(this.props.RepeatItemHandler);
+	        return resolvedArray;
+	    };
+	    ReactRepeater.prototype.render = function () {
+	        return (React.createElement(ParentTag, { TagName: this.props.ParentTag, ElementClass: this.props.ParentTagClass }, this.getList()));
+	    };
+	    return ReactRepeater;
+	}(React.Component));
+	exports.ReactRepeater = ReactRepeater;
+
 
 /***/ }
 /******/ ]);

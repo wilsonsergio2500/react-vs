@@ -27,10 +27,15 @@ export class StockComponent extends React.Component<IStockComponentProps, IStock
 
        
     }
+    private fetch: any;
     componentWillMount() {
         this.setState({ IsWorking: true });
         this.fetchStock(this.props.ticket);
+
+       
+
     }
+  
     componentWillReceiveProps(nextprop: IStockComponentProps) {
         if (!!nextprop.ticket) {
             this.fetchStock(nextprop.ticket);
