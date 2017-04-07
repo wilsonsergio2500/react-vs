@@ -65,6 +65,7 @@ export class ReactHttp extends React.Component<IReactHttpComponentProps, IReactH
 
     render() {
         let child: any = this.props.children;
-        return (child)(this.state);
+        
+        return child(this.state);
     }
 }
