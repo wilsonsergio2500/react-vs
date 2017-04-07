@@ -6,12 +6,12 @@ import * as React from 'react';
 
 export class LoadingAlertViews{
 
-    static GetView(){
+    static GetView(children : JSX.Element ){
         return (<div className="col-md-12 text-center">
             <div className="col-xs-12">
                 <i className="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
              </div>
-            Loading...
+            {children}
                 </div>);
     }
     

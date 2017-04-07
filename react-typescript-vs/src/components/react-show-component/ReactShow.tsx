@@ -8,6 +8,8 @@ interface IreactShowProps {
     show: any;
 }
 
+
+
 export class ReactShow extends React.Component<IreactShowProps, any> {
 
     componentWillUnmount() {
@@ -18,8 +20,17 @@ export class ReactShow extends React.Component<IreactShowProps, any> {
     }
 
     render() {
+        if (!!this.props.show) {
+            return React.cloneElement(this.props.children as JSX.Element);
+        }
+        else {
+            let style = {
+                display: 'none'
+            }
+            return React.cloneElement(this.props.children as JSX.Element, { style: style });
+
+        }
 
 
-        return React.cloneElement(this.props.children as JSX.Element, { className: ((!!this.props.show) ? 'show' : 'hide') });
     }
 }

@@ -30,21 +30,29 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="src\apis\fetch\fetchAsync.ts" />
     <TypeScriptCompile Include="src\apis\stock-nasdaq\stock-api-nasdaq.ts" />
+    <TypeScriptCompile Include="src\apis\stock\stock-details.ts" />
     <TypeScriptCompile Include="src\apis\weather\weather-api.ts" />
+    <TypeScriptCompile Include="src\apis\yql-place\yql-place.ts" />
+    <TypeScriptCompile Include="src\components-usage\async-component\test.tsx" />
+    <TypeScriptCompile Include="src\components\async-component\async-component.tsx" />
+    <TypeScriptCompile Include="src\components\async-component\test.tsx" />
     <TypeScriptCompile Include="src\components\book-component\bookComponent.tsx" />
     <TypeScriptCompile Include="src\components\book-detail-component\bookDetailComponent.tsx" />
     <TypeScriptCompile Include="src\components\book-detail-component\view\book-detail-view.tsx" />
     <TypeScriptCompile Include="src\components\error-component\errorComponent.tsx" />
     <TypeScriptCompile Include="src\components\error-component\view\erro-view.tsx" />
-    <TypeScriptCompile Include="src\components\loading-alert-component\loadingAlertComponent.tsx" />
-    <TypeScriptCompile Include="src\components\loading-alert-component\view\loading-alert-view.tsx" />
+    <TypeScriptCompile Include="src\components\loading-panel-component\loadingPanelComponent.tsx" />
+    <TypeScriptCompile Include="src\components\loading-panel-component\view\loading-panel-view.tsx" />
     <TypeScriptCompile Include="src\components\loading-button-component\index.tsx" />
     <TypeScriptCompile Include="src\components\loading-button-component\interfaces\ILoadingProps.ts" />
     <TypeScriptCompile Include="src\components\loading-button-component\loading-message-component\ButtonLoadingMessage.tsx" />
     <TypeScriptCompile Include="src\components\loading-button-component\LoadingButtonComponent.tsx" />
     <TypeScriptCompile Include="src\components\loading-button-component\message-component\buttonMessage.tsx" />
     <TypeScriptCompile Include="src\components\loading-button-component\test.tsx" />
+    <TypeScriptCompile Include="src\components\react-http\react-http-component.tsx" />
+    <TypeScriptCompile Include="src\components\react-http\test.tsx" />
     <TypeScriptCompile Include="src\components\react-show-component\ReactShow.tsx" />
     <TypeScriptCompile Include="src\components\repeater-component\reactRepeaterComponent.tsx" />
     <TypeScriptCompile Include="src\components\repeater-component\test.tsx" />
@@ -53,6 +61,7 @@
     <TypeScriptCompile Include="src\enums\actiontypes.ts" />
     <TypeScriptCompile Include="src\helpers\GuidGenerator.ts" />
     <TypeScriptCompile Include="src\helpers\MergeObject.ts" />
+    <TypeScriptCompile Include="src\helpers\StringExtended.ts" />
     <TypeScriptCompile Include="src\models\action\IActionProducer.ts" />
     <TypeScriptCompile Include="src\models\book\book-model.ts" />
     <TypeScriptCompile Include="src\components\book-component\reducer\book-reducer.ts" />
@@ -61,6 +70,8 @@
     <TypeScriptCompile Include="src\index.tsx" />
     <TypeScriptCompile Include="src\main\App.tsx" />
     <TypeScriptCompile Include="src\models\stock\stock.ts" />
+    <TypeScriptCompile Include="src\models\yqlPlace\yqlPlace.ts" />
+    <TypeScriptCompile Include="src\models\yqlWeather\IYqlWeather.ts" />
     <TypeScriptCompile Include="src\reducers\active-book\active-book-reducer.ts" />
     <TypeScriptCompile Include="src\reducers\index.ts" />
     <TypeScriptCompile Include="typings\index.d.ts" />

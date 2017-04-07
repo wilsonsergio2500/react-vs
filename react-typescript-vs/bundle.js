@@ -21932,6 +21932,7 @@
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var React = __webpack_require__(1);
 	var stockcomponent_1 = __webpack_require__(206);
+	var loadingalertcomponent_1 = __webpack_require__(236);
 	var test_1 = __webpack_require__(491);
 	var test_2 = __webpack_require__(497);
 	//export class App extends React.Component<any, {}> {
@@ -21959,7 +21960,8 @@
 	            React.createElement(stockcomponent_1.StockComponent, { ticket: "CSCO" }),
 	            React.createElement(stockcomponent_1.StockComponent, { ticket: "GWZ" }),
 	            React.createElement(test_2.RepeaterTest, null),
-	            React.createElement(test_1.LoadingButtonTest, null)));
+	            React.createElement(test_1.LoadingButtonTest, null),
+	            React.createElement(loadingalertcomponent_1.LoadingAlertComponent, null)));
 	    };
 	    return App;
 	}(React.Component));
@@ -42958,9 +42960,21 @@
 	    };
 	    LoadingButtonTest.prototype.render = function () {
 	        var _this = this;
-	        return (React.createElement(index_1.LoadingButton, { buttonClass: "btn btn-primary", type: "button", IsWorking: this.state.gotBusy, OnClick: function () { return _this.OnClick(); } },
-	            React.createElement(index_1.BtnMesage, null, "Update"),
-	            React.createElement(index_1.BtnLoadingMessage, null, "Loading..")));
+	        return (React.createElement("div", { className: "container" },
+	            React.createElement("div", { className: "" },
+	                React.createElement("code", null,
+	                    "Loading Button - ",
+	                    React.createElement("b", null, "Click"),
+	                    " to see in Action")),
+	            React.createElement("div", { className: "col-md-2" },
+	                React.createElement(index_1.LoadingButton, { buttonClass: "btn btn-primary", type: "button", IsWorking: this.state.gotBusy, OnClick: function () { return _this.OnClick(); } },
+	                    React.createElement(index_1.BtnMesage, null, "Update"),
+	                    React.createElement(index_1.BtnLoadingMessage, null, "Loading.."))),
+	            React.createElement("div", { className: "col-md-2" },
+	                React.createElement(index_1.LoadingButton, { buttonClass: "btn btn-danger", type: "button", IsWorking: this.state.gotBusy, OnClick: function () { return _this.OnClick(); } },
+	                    React.createElement(index_1.BtnMesage, null,
+	                        React.createElement("i", { className: "fa fa-trash-o" })),
+	                    React.createElement(index_1.BtnLoadingMessage, null, "Deleting Stuff...")))));
 	    };
 	    return LoadingButtonTest;
 	}(React.Component));
@@ -43079,6 +43093,15 @@
 	// for more information see the following page on the TypeScript wiki:
 	// https://github.com/Microsoft/TypeScript/wiki/JSX
 	var React = __webpack_require__(1);
+	//export class ReactShow extends React.Component<IreactShowProps, any> {
+	//    componentWillUnmount() {
+	//    }
+	//    componentWillReceiveProps(nextprop: IreactShowProps) {
+	//    }
+	//    render() {
+	//        return React.cloneElement(this.props.children as JSX.Element, { className: ((!!this.props.show) ? 'show' : 'hide') });
+	//    }
+	//}
 	var ReactShow = (function (_super) {
 	    __extends(ReactShow, _super);
 	    function ReactShow() {
@@ -43089,7 +43112,15 @@
 	    ReactShow.prototype.componentWillReceiveProps = function (nextprop) {
 	    };
 	    ReactShow.prototype.render = function () {
-	        return React.cloneElement(this.props.children, { className: ((!!this.props.show) ? 'show' : 'hide') });
+	        if (!!this.props.show) {
+	            return React.cloneElement(this.props.children);
+	        }
+	        else {
+	            var style = {
+	                display: 'none'
+	            };
+	            return React.cloneElement(this.props.children, { style: style });
+	        }
 	    };
 	    return ReactShow;
 	}(React.Component));

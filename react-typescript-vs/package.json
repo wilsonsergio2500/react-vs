@@ -26,6 +26,7 @@
     "webpack-dev-server": "^1.14.0"
   },
   "dependencies": {
+    "@types/bluebird": "^3.5.2",
     "@types/classnames": "0.0.32",
     "@types/react": "^0.14.44",
     "@types/react-bootstrap": "0.0.47",
@@ -35,6 +36,7 @@
     "@types/redux-thunk": "^2.1.0",
     "axios": "^0.15.3",
     "babel-preset-stage-1": "^6.1.18",
+    "bluebird": "^3.5.0",
     "classnames": "^2.2.5",
     "lodash": "^3.10.1",
     "react": "^0.14.3",

@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import { GetStockPrice } from '../../apis/stock-nasdaq/stock-api-nasdaq';
 import { StockViews } from './view/stock-view';
 import { IStock } from '../../models/stock/stock';
-import { LoadingAlertComponent } from '../loading-alert-component/loadingalertcomponent';
+import { LoadingPanelComponent } from '../loading-panel-component/loadingpanelcomponent'
 import { ErrorComponent } from '../error-component/errorcomponent';
 
 interface IStockComponentProps {
@@ -53,8 +53,13 @@ export class StockComponent extends React.Component<IStockComponentProps, IStock
         });
     }
     render() {
+
+
+
         if (this.state.IsWorking) {
-            return (<LoadingAlertComponent />);
+            return (<LoadingPanelComponent>
+                retrieving {this.props.ticket}...
+            </LoadingPanelComponent>);
         }
         if (!!this.state.error) {
             return (

@@ -12,7 +12,7 @@ export class RepeaterTest extends React.Component<any, any> {
 
     repeatHandler(book: BookVm, index: number) {
 
-        return (<div className="col-md-3" key={index}>{book.title}</div>);
+        return (<div className="col-md-12" key={index}>{book.title}</div>);
     }
 
     render() {
@@ -21,9 +21,9 @@ export class RepeaterTest extends React.Component<any, any> {
         return (
             <div className="container">
                 <div className="">
-                    <code>The below is data from a <b>Repeater</b>, like <b>ngRepeat:</b></code>
+                   
                 </div>
-                <div className="col-md-112">
+                <div className="col-md-12">
                         <ReactRepeater array={array}
                         ParentTag="div"
                         ParentTagClass="row"

@@ -32,7 +32,7 @@ export class LoadingButtonTest extends React.Component<any, ILoadingButtonTest> 
         return (
             <div className="container">
                 <div className="">
-                    <code>Loading Button - <b>Click</b> to see in Action</code>
+                    
                 </div>
                 <div className="col-md-2">
                     <LoadingButton buttonClass="btn btn-primary" type="button" IsWorking={this.state.gotBusy} OnClick={() => this.OnClick()}>
@@ -47,7 +47,7 @@ export class LoadingButtonTest extends React.Component<any, ILoadingButtonTest> 
                 </div>
                 <div className="col-md-2">
                     <LoadingButton buttonClass="btn btn-danger" type="button" IsWorking={this.state.gotBusy} OnClick={() => this.OnClick()}>
-                        <BtnMesage>
+                        <BtnMesage >
                             <i className="fa fa-trash-o"></i>
                         </BtnMesage>
                         <BtnLoadingMessage>

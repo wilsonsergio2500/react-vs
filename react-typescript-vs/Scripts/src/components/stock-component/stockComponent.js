@@ -10,7 +10,7 @@ var __extends = (this && this.__extends) || function (d, b) {
 var React = require('react');
 var stock_api_nasdaq_1 = require('../../apis/stock-nasdaq/stock-api-nasdaq');
 var stock_view_1 = require('./view/stock-view');
-var loadingalertcomponent_1 = require('../loading-alert-component/loadingalertcomponent');
+var loadingpanelcomponent_1 = require('../loading-panel-component/loadingpanelcomponent');
 var errorcomponent_1 = require('../error-component/errorcomponent');
 var StockComponent = (function (_super) {
     __extends(StockComponent, _super);
@@ -39,7 +39,10 @@ var StockComponent = (function (_super) {
     };
     StockComponent.prototype.render = function () {
         if (this.state.IsWorking) {
-            return (React.createElement(loadingalertcomponent_1.LoadingAlertComponent, null));
+            return (React.createElement(loadingpanelcomponent_1.LoadingPanelComponent, null, 
+                "retrieving ", 
+                this.props.ticket, 
+                "..."));
         }
         if (!!this.state.error) {
             return (React.createElement(errorcomponent_1.ErrorComponent, null, 
