@@ -25,11 +25,13 @@
     <Content Include="app.css" />
     <Content Include="index.html" />
     <Content Include="style\style.css" />
+    <Content Include="test\bundle.js" />
+    <Content Include="test\karma.conf.js" />
     <Content Include="web.config" />
+    <Content Include="webpack-test.js" />
     <Content Include="webpack.config.js" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="src\apis\fetch\fetchAsync.ts" />
     <TypeScriptCompile Include="src\apis\stock-nasdaq\stock-api-nasdaq.ts" />
     <TypeScriptCompile Include="src\apis\stock\stock-details.ts" />
@@ -74,6 +76,11 @@
     <TypeScriptCompile Include="src\models\yqlWeather\IYqlWeather.ts" />
     <TypeScriptCompile Include="src\reducers\active-book\active-book-reducer.ts" />
     <TypeScriptCompile Include="src\reducers\index.ts" />
+    <TypeScriptCompile Include="test\all.tsx" />
+    <TypeScriptCompile Include="test\spec\components\loading-panel-component\loading-panel-component-test.tsx" />
+    <TypeScriptCompile Include="test\spec\components\react-show-component\react-show-component-test.tsx" />
+    <TypeScriptCompile Include="test\spec\example\test-1.ts" />
+    <TypeScriptCompile Include="test\spec\example\test.tsx" />
     <TypeScriptCompile Include="typings\index.d.ts" />
   </ItemGroup>
   <ItemGroup>
@@ -89,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\components\stock-component\action\" />
+    <Folder Include="src\usage\" />
     <Folder Include="typings\custom-types\" />
     <Folder Include="typings\modules\" />
   </ItemGroup>

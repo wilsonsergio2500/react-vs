@@ -16,19 +16,13 @@ var RepeaterTest = (function (_super) {
         _super.apply(this, arguments);
     }
     RepeaterTest.prototype.repeatHandler = function (book, index) {
-        return (React.createElement("div", {className: "col-md-3", key: index}, book.title));
+        return (React.createElement("div", {className: "col-md-12", key: index}, book.title));
     };
     RepeaterTest.prototype.render = function () {
         var array = book_reducer_1.BookReducer.ReducerFunction();
         return (React.createElement("div", {className: "container"}, 
-            React.createElement("div", {className: ""}, 
-                React.createElement("code", null, 
-                    "The below is data from a ", 
-                    React.createElement("b", null, "Repeater"), 
-                    ", like ", 
-                    React.createElement("b", null, "ngRepeat:"))
-            ), 
-            React.createElement("div", {className: "col-md-112"}, 
+            React.createElement("div", {className: ""}), 
+            React.createElement("div", {className: "col-md-12"}, 
                 React.createElement(reactrepeatercomponent_1.ReactRepeater, {array: array, ParentTag: "div", ParentTagClass: "row", RepeatItemHandler: this.repeatHandler})
             )));
     };

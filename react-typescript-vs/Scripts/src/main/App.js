@@ -12,19 +12,8 @@ var stockcomponent_1 = require('../components/stock-component/stockcomponent');
 var loadingpanelcomponent_1 = require('../components/loading-panel-component/loadingpanelcomponent');
 var test_1 = require('../components/loading-button-component/test');
 var test_2 = require('../components/repeater-component/test');
-//export class App extends React.Component<any, {}> {
-//    render(){
-//        return(<div>
-//            <BookComponent />
-//            <BookDetailComponent />
-//            <StockComponent ticket="GOOGL" />                                     
-//            <StockComponent ticket="MSFT" />
-//            <StockComponent ticket="CSCO" />
-//            <StockComponent ticket="GWZ" />
-//            <LoadingAlertComponent />
-//                </div>);
-//    }
-//}
+var test_3 = require('../components/async-component/test');
+var test_4 = require('../components/react-http/test');
 var App = (function (_super) {
     __extends(App, _super);
     function App() {
@@ -32,13 +21,22 @@ var App = (function (_super) {
     }
     App.prototype.render = function () {
         return (React.createElement("div", null, 
+            React.createElement("h3", null, "Stock Component (Fetch Http Internally)"), 
             React.createElement(stockcomponent_1.StockComponent, {ticket: "GOOGL"}), 
             React.createElement(stockcomponent_1.StockComponent, {ticket: "MSFT"}), 
-            React.createElement(stockcomponent_1.StockComponent, {ticket: "CSCO"}), 
             React.createElement(stockcomponent_1.StockComponent, {ticket: "GWZ"}), 
+            React.createElement("h3", null, "Repeater (Attempt to Emulates an ngRepeat)"), 
             React.createElement(test_2.RepeaterTest, null), 
+            React.createElement("h3", null, "Loading Button (Nested Component with Transclusion)"), 
             React.createElement(test_1.LoadingButtonTest, null), 
-            React.createElement(loadingpanelcomponent_1.LoadingPanelComponent, null, "Loading..")));
+            React.createElement("h3", null, "Loading Panel (Loading Panel with Transclusion)"), 
+            React.createElement(loadingpanelcomponent_1.LoadingPanelComponent, null, "Loading.."), 
+            React.createElement("h3", null, "Async Component (Emulates Angular 2 Async Pipe)"), 
+            React.createElement("p", null, "Component Handles Async Request"), 
+            React.createElement(test_3.AsyncComponentTest, null), 
+            React.createElement(test_3.AsyncComponentStockSymbol, null), 
+            React.createElement("h3", null, "Http Request Component (Emulates Polymer Http Request Component)"), 
+            React.createElement(test_4.ReactHttpComponentExample, null)));
     };
     return App;
 }(React.Component));

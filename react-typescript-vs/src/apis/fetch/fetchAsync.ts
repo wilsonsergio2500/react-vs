@@ -35,4 +35,5 @@ export function fetchAsyncText(url: string): Promise<string> {
 
         xhr.open("GET", url, true);
         xhr.send(null);
+    })
 }
