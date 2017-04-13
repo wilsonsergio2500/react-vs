@@ -24,6 +24,7 @@
   <ItemGroup>
     <Content Include="app.css" />
     <Content Include="index.html" />
+    <Content Include="style\sb-admin.css" />
     <Content Include="style\style.css" />
     <Content Include="test\bundle.js" />
     <Content Include="test\karma.conf.js" />
@@ -38,8 +39,8 @@
     <TypeScriptCompile Include="src\apis\weather\weather-api.ts" />
     <TypeScriptCompile Include="src\apis\yql-place\yql-place.ts" />
     <TypeScriptCompile Include="src\components-usage\async-component\test.tsx" />
+    <TypeScriptCompile Include="src\components\async-component\async-component-2.tsx" />
     <TypeScriptCompile Include="src\components\async-component\async-component.tsx" />
-    <TypeScriptCompile Include="src\components\async-component\test.tsx" />
     <TypeScriptCompile Include="src\components\book-component\bookComponent.tsx" />
     <TypeScriptCompile Include="src\components\book-detail-component\bookDetailComponent.tsx" />
     <TypeScriptCompile Include="src\components\book-detail-component\view\book-detail-view.tsx" />
@@ -52,18 +53,17 @@
     <TypeScriptCompile Include="src\components\loading-button-component\loading-message-component\ButtonLoadingMessage.tsx" />
     <TypeScriptCompile Include="src\components\loading-button-component\LoadingButtonComponent.tsx" />
     <TypeScriptCompile Include="src\components\loading-button-component\message-component\buttonMessage.tsx" />
-    <TypeScriptCompile Include="src\components\loading-button-component\test.tsx" />
     <TypeScriptCompile Include="src\components\react-http\react-http-component.tsx" />
-    <TypeScriptCompile Include="src\components\react-http\test.tsx" />
     <TypeScriptCompile Include="src\components\react-show-component\ReactShow.tsx" />
     <TypeScriptCompile Include="src\components\repeater-component\reactRepeaterComponent.tsx" />
-    <TypeScriptCompile Include="src\components\repeater-component\test.tsx" />
     <TypeScriptCompile Include="src\components\stock-component\stockComponent.tsx" />
     <TypeScriptCompile Include="src\components\stock-component\view\stock-view.tsx" />
     <TypeScriptCompile Include="src\enums\actiontypes.ts" />
     <TypeScriptCompile Include="src\helpers\GuidGenerator.ts" />
     <TypeScriptCompile Include="src\helpers\MergeObject.ts" />
     <TypeScriptCompile Include="src\helpers\StringExtended.ts" />
+    <TypeScriptCompile Include="src\main\routes.tsx" />
+    <TypeScriptCompile Include="src\main\views\nav.tsx" />
     <TypeScriptCompile Include="src\models\action\IActionProducer.ts" />
     <TypeScriptCompile Include="src\models\book\book-model.ts" />
     <TypeScriptCompile Include="src\components\book-component\reducer\book-reducer.ts" />
@@ -74,8 +74,20 @@
     <TypeScriptCompile Include="src\models\stock\stock.ts" />
     <TypeScriptCompile Include="src\models\yqlPlace\yqlPlace.ts" />
     <TypeScriptCompile Include="src\models\yqlWeather\IYqlWeather.ts" />
+    <TypeScriptCompile Include="src\pages\loading-button\loading-buton-page.tsx" />
+    <TypeScriptCompile Include="src\pages\loading-panel\loading-panel.tsx" />
+    <TypeScriptCompile Include="src\pages\miscellaneous\miscellaneous.tsx" />
+    <TypeScriptCompile Include="src\pages\react-repeat\react-repeat-page.tsx" />
+    <TypeScriptCompile Include="src\pages\react-show\react-show.tsx" />
     <TypeScriptCompile Include="src\reducers\active-book\active-book-reducer.ts" />
     <TypeScriptCompile Include="src\reducers\index.ts" />
+    <TypeScriptCompile Include="src\usage\async-component\async-component-usage.tsx" />
+    <TypeScriptCompile Include="src\usage\async-component\async-component-usage2.tsx" />
+    <TypeScriptCompile Include="src\usage\loading-button-component\loading-button-component-usage.tsx" />
+    <TypeScriptCompile Include="src\usage\loading-panel-component\loading-panel-component-usage.tsx" />
+    <TypeScriptCompile Include="src\usage\react-http-component\react-http-component-usage.tsx" />
+    <TypeScriptCompile Include="src\usage\react-show-component\react-show-component-usage.tsx" />
+    <TypeScriptCompile Include="src\usage\repeater-component\repeater-component-usage.tsx" />
     <TypeScriptCompile Include="test\all.tsx" />
     <TypeScriptCompile Include="test\spec\components\loading-panel-component\loading-panel-component-test.tsx" />
     <TypeScriptCompile Include="test\spec\components\react-show-component\react-show-component-test.tsx" />
@@ -96,7 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\components\stock-component\action\" />
-    <Folder Include="src\usage\" />
+    <Folder Include="src\pages\home\" />
     <Folder Include="typings\custom-types\" />
     <Folder Include="typings\modules\" />
   </ItemGroup>

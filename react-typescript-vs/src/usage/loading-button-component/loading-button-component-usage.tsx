@@ -1,23 +1,20 @@
-﻿/// <reference path="index.tsx" />
+﻿/// <reference path="../../components/loading-button-component/index.tsx" />
 // A '.tsx' file enables JSX support in the TypeScript compiler, 
 // for more information see the following page on the TypeScript wiki:
 // https://github.com/Microsoft/TypeScript/wiki/JSX
 
 import * as React from 'react';
-
-import { LoadingButton, BtnMesage, BtnLoadingMessage } from './index';
+import { LoadingButton, BtnMesage, BtnLoadingMessage } from '../../components/loading-button-component/index';
 export interface ILoadingButtonTest {
     gotBusy: boolean;
 }
 
-
-export class LoadingButtonTest extends React.Component<any, ILoadingButtonTest> {
+export class LoadingButtonComponentUsage extends React.Component<any, ILoadingButtonTest> {
     componentWillMount() {
-        this.setState({gotBusy: false})
+        this.setState({ gotBusy: false })
     }
 
     OnClick() {
-        console.log('you clicked me', 'I am on parent');
         this.setState({
             gotBusy: true
         });
@@ -30,10 +27,8 @@ export class LoadingButtonTest extends React.Component<any, ILoadingButtonTest> 
 
     render() {
         return (
-            <div className="container">
-                <div className="">
-                    
-                </div>
+            <div className="row">
+              
                 <div className="col-md-2">
                     <LoadingButton buttonClass="btn btn-primary" type="button" IsWorking={this.state.gotBusy} OnClick={() => this.OnClick()}>
                         <BtnMesage>
@@ -43,7 +38,7 @@ export class LoadingButtonTest extends React.Component<any, ILoadingButtonTest> 
                             Loading..
                         </BtnLoadingMessage>
                     </LoadingButton>
-                    
+
                 </div>
                 <div className="col-md-2">
                     <LoadingButton buttonClass="btn btn-danger" type="button" IsWorking={this.state.gotBusy} OnClick={() => this.OnClick()}>
@@ -55,8 +50,8 @@ export class LoadingButtonTest extends React.Component<any, ILoadingButtonTest> 
                         </BtnLoadingMessage>
                     </LoadingButton>
                 </div>
-           </div>
-            );
+            </div>
+        );
     }
 
 }

@@ -6,7 +6,7 @@
 import * as React from 'react';
 import * as Promise from 'bluebird';
 
-interface IAsyncComponentProps {
+export interface IAsyncComponentProps {
     asyncPromise: Promise<any>
     asyncDelay?: number; //in milliseconds.
 }

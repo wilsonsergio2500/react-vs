@@ -1,23 +1,25 @@
-﻿// A '.tsx' file enables JSX support in the TypeScript compiler, 
+﻿
+// A '.tsx' file enables JSX support in the TypeScript compiler, 
 // for more information see the following page on the TypeScript wiki:
 // https://github.com/Microsoft/TypeScript/wiki/JSX
 import * as React from 'react';
-import { ReactHttp, IReactHttpComponentState } from './react-http-component';
-import { LoadingPanelComponent } from '../loading-panel-component/loadingpanelcomponent';
+import { LoadingPanelComponent } from '../../components/loading-panel-component/loadingpanelcomponent';
+import { ReactHttp, IReactHttpComponentState } from '../../components/react-http/react-http-component';
 import { IYqlWeather, IyqlForecastItem } from '../../models/yqlweather/iyqlweather';
-import { ReactRepeater } from '../repeater-component/reactrepeatercomponent';
+import { ReactRepeater } from '../../components/repeater-component/reactrepeatercomponent';
 
-export class ReactHttpComponentExample extends React.Component<any, any> {
 
-     RegionWoeid = {
+export class ReactHttpComponentUsage extends React.Component<any, any> {
+
+    RegionWoeid = {
         Omaha: 2465512
     }
 
     componentWillMount() {
 
         this.setState({ RegionWoeid: this.RegionWoeid.Omaha });
-        
-     }
+
+    }
 
     repeatHandler(item: IyqlForecastItem, index: number) {
         return (
@@ -27,7 +29,7 @@ export class ReactHttpComponentExample extends React.Component<any, any> {
                 <div className="col-md-3">High: {item.high}</div>
                 <div className="col-md-3">Low: {item.low}</div>
             </div>
-            )
+        )
     }
 
     render() {
@@ -37,7 +39,7 @@ export class ReactHttpComponentExample extends React.Component<any, any> {
         return (
             <div className="col-md-12">
                 <ReactHttp url="https://query.yahooapis.com/v1/public/yql?format=json&diagnostics=true&q={0}" queryProps={[query]}>
-                {
+                    {
                         (state: IReactHttpComponentState<IYqlWeather>) => {
                             if (state.IsLoading) {
                                 return (<LoadingPanelComponent>
@@ -57,10 +59,10 @@ export class ReactHttpComponentExample extends React.Component<any, any> {
                                                 RepeatItemHandler={this.repeatHandler}></ReactRepeater>
                                         </div>
                                     </div>
-                                    )
+                                )
                             }
-                     }
-                }
+                        }
+                    }
                 </ReactHttp>
             </div>
 

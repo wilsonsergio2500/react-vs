@@ -8,9 +8,10 @@ var react_redux_1 = require('react-redux');
 var redux_1 = require('redux');
 var index_1 = require('./reducers/index');
 var redux_thunk_1 = require('redux-thunk');
-var app_1 = require('./main/app');
+var routes_1 = require('./main/routes');
+var react_router_1 = require('react-router');
 var storeWisthMiddleware = redux_1.applyMiddleware(redux_thunk_1.default)(redux_1.createStore);
 ReactDOM.render(React.createElement(react_redux_1.Provider, {store: storeWisthMiddleware(index_1.default)}, 
-    React.createElement(app_1.App, null)
-), document.querySelector(".container"));
+    React.createElement(react_router_1.Router, {history: react_router_1.browserHistory, routes: routes_1.Routes})
+), document.querySelector("#app"));
 //# sourceMappingURL=index.js.map
