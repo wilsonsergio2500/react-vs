@@ -35,6 +35,7 @@ export class AsyncComponent2Page extends React.Component<any, any>{
                             <SyntaxHighlighter language='javascript' style={docco}>
                                 {
 `
+...
 onSuccess(payload: IStock[]) {
         let stock = payload[0];
         let IsUp = (stock.c.charAt(0) == '+');
@@ -56,6 +57,7 @@ onSuccess(payload: IStock[]) {
             </div>
         );
     }
+...
 <AsyncComponent2 asyncPromise={this.state.promiseToSolve} asyncDelay={3000} onSuccess={this.onSuccess}>
 
 </AsyncComponent2>`

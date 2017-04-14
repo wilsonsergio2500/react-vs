@@ -20,7 +20,7 @@ export class Nav extends React.Component<any, any>{
             <div className="collapse navbar-collapse">
                 <ul className="nav navbar-nav side-nav">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#"><i className="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a className="nav-link" href="#"><i className="fa fa-fw fa-home"></i> About</a>
                     </li>
                     <li className="nav-item">
                         <Link to="/reactshow" className="nav-link">
@@ -40,7 +40,7 @@ export class Nav extends React.Component<any, any>{
                     <li className="nav-item">
                         <Link to="/loadingbutton" className="nav-link">
                             <i className="fa fa-fw fa-bolt"></i> Loading Button
-                    </Link>
+                        </Link>
                     </li>
                     <li className="nav-item">
                         <a onClick={() => this.setState({ async: { open: !this.state.async.open } })} >
@@ -66,6 +66,11 @@ export class Nav extends React.Component<any, any>{
 
                             </ul>
                         </Collapse>
+                    </li>
+                    <li>
+                        <Link to="/reacthttp" className="nav-link">
+                            <i className="fa fa-fw fa-bolt"></i> React Http
+                        </Link>
                     </li>
                 </ul>
             </div>

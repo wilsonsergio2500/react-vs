@@ -12,7 +12,7 @@ import { LoadingPanelPage } from '../pages/loading-panel/loading-panel';
 import { ReactRepeatPage } from '../pages/react-repeat/react-repeat-page';
 import { AsyncComponent1Page } from '../pages/react-async/react-async1-page';
 import { AsyncComponent2Page } from '../pages/react-async/react-async2-page';
-
+import { ReactHttpPage } from '../pages/react-http/react-http-page';
 
 export const Routes = (
     <Route path="/" component={App} >
@@ -23,6 +23,7 @@ export const Routes = (
 
         <Route path="reactasync1" component={AsyncComponent1Page} />
         <Route path="reactasync2" component={AsyncComponent2Page} />
+        <Route path="reacthttp" component={ReactHttpPage} />
         
     </Route>
 );
