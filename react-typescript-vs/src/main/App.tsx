@@ -63,7 +63,7 @@ export class App extends React.Component<any, {}> {
         return (
             <div>
                 
-                {Nav}
+                <Nav></Nav>
 
                     <div className="content-wrapper py-3">
                     <div className="container-fluid main-content">
@@ -80,7 +80,7 @@ export class App extends React.Component<any, {}> {
                             {this.props.children}
                         
 
-                            {sample}
+                         
 
                             
 

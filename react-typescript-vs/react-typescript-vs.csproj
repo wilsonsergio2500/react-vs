@@ -77,6 +77,8 @@
     <TypeScriptCompile Include="src\pages\loading-button\loading-buton-page.tsx" />
     <TypeScriptCompile Include="src\pages\loading-panel\loading-panel.tsx" />
     <TypeScriptCompile Include="src\pages\miscellaneous\miscellaneous.tsx" />
+    <TypeScriptCompile Include="src\pages\react-async\react-async1-page.tsx" />
+    <TypeScriptCompile Include="src\pages\react-async\react-async2-page.tsx" />
     <TypeScriptCompile Include="src\pages\react-repeat\react-repeat-page.tsx" />
     <TypeScriptCompile Include="src\pages\react-show\react-show.tsx" />
     <TypeScriptCompile Include="src\reducers\active-book\active-book-reducer.ts" />

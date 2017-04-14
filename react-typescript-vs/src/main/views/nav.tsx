@@ -3,37 +3,74 @@
 // https://github.com/Microsoft/TypeScript/wiki/JSX
 import * as React from 'react';
 import { Link } from 'react-router';
+import { Panel, Collapse } from 'react-bootstrap';
 
-export const Nav = (
-    <nav id="mainNav" className="navbar navbar-inverse navbar-fixed-top">
+export class Nav extends React.Component<any, any>{
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            async: { open: false }
+        }
+    }
 
-        <a className="navbar-brand" href="#" >React Components</a>
-        <div className="collapse navbar-collapse">
-            <ul className="nav navbar-nav side-nav">
-                <li className="nav-item active">
-                    <a className="nav-link" href="#"><i className="fa fa-fw fa-dashboard"></i> Dashboard</a>
-                </li>
-                <li className="nav-item">
-                    <Link to="/reactshow" className="nav-link">
-                        <i className="fa fa-fw fa-bolt"></i> React Show
+    render() {
+        return (<nav id="mainNav" className="navbar navbar-inverse navbar-fixed-top">
+
+            <a className="navbar-brand" href="#" >React Components</a>
+            <div className="collapse navbar-collapse">
+                <ul className="nav navbar-nav side-nav">
+                    <li className="nav-item active">
+                        <a className="nav-link" href="#"><i className="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/reactshow" className="nav-link">
+                            <i className="fa fa-fw fa-bolt"></i> React Show
                     </Link>
-                </li>
-                <li className="nav-item">
-                    <Link to="/reactrepeat" className="nav-link">
-                        <i className="fa fa-fw fa-bolt"></i> React Repeat
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/reactrepeat" className="nav-link">
+                            <i className="fa fa-fw fa-bolt"></i> React Repeat
                     </Link>
-                </li>
-                <li className="nav-item">
-                    <Link to="/loadingpanel" className="nav-link">
-                        <i className="fa fa-fw fa-bolt"></i> Loading Panel
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/loadingpanel" className="nav-link">
+                            <i className="fa fa-fw fa-bolt"></i> Loading Panel
                     </Link>
-                </li>
-                <li className="nav-item">
-                    <Link to="/loadingbutton" className="nav-link">
-                        <i className="fa fa-fw fa-bolt"></i> Loading Button
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/loadingbutton" className="nav-link">
+                            <i className="fa fa-fw fa-bolt"></i> Loading Button
                     </Link>
-                </li>
-            </ul>
-        </div>
-    </nav>
-);
+                    </li>
+                    <li className="nav-item">
+                        <a onClick={() => this.setState({ async: { open: !this.state.async.open } })} >
+                           React Async
+                            <i className="fa fa-fw fa-caret-down"></i> 
+                        </a>
+                        
+                        <Collapse  in={this.state.async.open}>
+                            <ul >
+                                <li className="nav-item">
+                                    <Link to="/reactasync1" className="nav-link">
+                                        <i className="fa fa-fw fa-bolt"></i>
+                                        React Async 1
+                                    </Link>
+                                </li>
+
+                                <li className="nav-item">
+                                    <Link to="/reactasync2" className="nav-link">
+                                        <i className="fa fa-fw fa-bolt"></i>
+                                        React Async 2
+                                    </Link>
+                                </li>
+
+                            </ul>
+                        </Collapse>
+                    </li>
+                </ul>
+            </div>
+        </nav>)
+
+    }
+}
+
