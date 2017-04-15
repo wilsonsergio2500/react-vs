@@ -19,7 +19,7 @@ export class HomePage extends React.Component<any, any>{
         return (<div>
             <div className="col-md-12">
                 <h1 className="page-header">
-                    About Example <small></small>
+                    About <small>Project Overview</small>
                 </h1>
             </div>
             <div className="col-md-12">
@@ -47,6 +47,32 @@ export class HomePage extends React.Component<any, any>{
                 <div className="panel panel-default">
                     <div className="panel-heading">Motivation</div>
                     <div className="panel-body">
+                        <div className="block-quote">
+                            <p>
+                                <i className="fa fa-quote-left"></i> &nbsp;
+                                We cannot look at our own personal experiences or use the same mental model over and over again; we have to look at other disciplines and activities and relate or connect to them to what we know from our experiences and the strategic world we live in. 
+                                <br />... <br/>
+                                Analysis and synthesis across a variety of domains, or across competing / independent channels of information, will enable us to spontaneously generate new mental images or impressions that match up with and unfolding world of uncertainty and change.
+                                &nbsp;
+
+                                <i className="fa fa-quote-right"></i>
+                            </p>
+                        </div>
+                        <div>
+                           <b> --- John Body</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="col-md-12">
+                <div className="panel panel-default">
+                    <div className="panel-heading">Forget It!..., Just Show me The Code!</div>
+                    <div className="panel-body">
+                        All the component examples could be found in my codepen.io @ &nbsp;
+                        <a href="https://codepen.io/wilsonsergio2500/" target="_blank">
+                            https://codepen.io/wilsonsergio2500/
+                            </a>
+
                     </div>
                 </div>
             </div>
