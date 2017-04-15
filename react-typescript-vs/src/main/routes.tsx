@@ -17,6 +17,9 @@ import { HomePage } from '../pages/home/home'
 
 export const Routes = (
     <Route path="/" component={App} >
+        
+        <IndexRoute component={HomePage} />
+
         <Route path="home" component={HomePage} />
         <Route path="reactshow" component={ReactShowPage} />
         <Route path="reactrepeat" component={ReactRepeatPage} />

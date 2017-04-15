@@ -20,7 +20,7 @@ export class Nav extends React.Component<any, any>{
             <div className="collapse navbar-collapse">
                 <ul className="nav navbar-nav side-nav">
                     <li className="nav-item active">
-                        <Link to="/home" className="nav-link">
+                        <Link to="/" className="nav-link">
                             <i className="fa fa-fw fa-home"></i> About
                           </Link>
                     </li>

@@ -70,21 +70,13 @@ export class App extends React.Component<any, {}> {
 
                        
                             <div className="row">
-                                <div className="col-md-12">
-                                    <h1 className="page-header">
-                                        Dashboard <small>Statistics Overview</small>
-                                    </h1>
-                                </div>
+                                
                             </div>
 
                             {this.props.children}
                         
 
-                         
-
-                            
-
-
+                     
                                         
                                         
                     </div>
