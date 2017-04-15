@@ -74,6 +74,7 @@
     <TypeScriptCompile Include="src\models\stock\stock.ts" />
     <TypeScriptCompile Include="src\models\yqlPlace\yqlPlace.ts" />
     <TypeScriptCompile Include="src\models\yqlWeather\IYqlWeather.ts" />
+    <TypeScriptCompile Include="src\pages\home\home.tsx" />
     <TypeScriptCompile Include="src\pages\loading-button\loading-buton-page.tsx" />
     <TypeScriptCompile Include="src\pages\loading-panel\loading-panel.tsx" />
     <TypeScriptCompile Include="src\pages\miscellaneous\miscellaneous.tsx" />
@@ -111,7 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="src\components\stock-component\action\" />
-    <Folder Include="src\pages\home\" />
     <Folder Include="typings\custom-types\" />
     <Folder Include="typings\modules\" />
   </ItemGroup>
