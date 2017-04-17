@@ -20,4 +20,4 @@ var LoadingPanelComponent = (function (_super) {
     return LoadingPanelComponent;
 }(React.Component));
 exports.LoadingPanelComponent = LoadingPanelComponent;
-//# sourceMappingURL=loadingPanelComponent.js.map
+//# sourceMappingURL=loadingpanelcomponent.js.map

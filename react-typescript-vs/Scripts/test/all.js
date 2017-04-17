@@ -5,4 +5,6 @@
 //import  './spec/example/test';
 //import './spec/example/test-1';
 require('./spec/components/loading-panel-component/loading-panel-component-test');
+require('./spec/components/react-show-component/react-show-component-test');
+require('./spec/components/loading-button-component/loading-button-component-test');
 //# sourceMappingURL=all.js.map

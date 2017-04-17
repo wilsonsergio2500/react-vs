@@ -15,7 +15,16 @@ const componentHidden = shallow(<ReactShow show={false} >
     {item}</ReactShow>);
 
 describe('<ReactShow Component/>', () => {
-    it('component show element', () => {
-        
+    it('component transcluded the element', () => {
+        expect(componentShown.contains(item)).to.be.equal(true);
     });
+
+    it('show="true" showed the element', () => {
+        expect(componentShown.html().indexOf('style') == -1).to.be.equal(true);
+    });
+
+    it('show="false" hid the element', () => {
+        expect(componentHidden.html().indexOf('display:none') != -1).to.be.equal(true);
+    });
+    
 });

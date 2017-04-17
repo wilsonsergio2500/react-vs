@@ -76,6 +76,7 @@ export class HomePage extends React.Component<any, any>{
                     </div>
                 </div>
             </div>
+           
         </div>);
     }
 

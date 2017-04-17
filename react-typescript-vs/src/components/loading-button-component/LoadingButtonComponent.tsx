@@ -6,7 +6,7 @@ import * as React from 'react';
 
 import { ILoadingProps } from './interfaces/iloadingprops';
 
-interface ILoadingButtonComponentProps extends ILoadingProps {
+export interface ILoadingButtonComponentProps extends ILoadingProps {
     buttonClass: string;
     type: string;
     OnClick: React.EventHandler<any>;

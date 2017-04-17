@@ -12,6 +12,6 @@ var routes_1 = require('./main/routes');
 var react_router_1 = require('react-router');
 var storeWisthMiddleware = redux_1.applyMiddleware(redux_thunk_1.default)(redux_1.createStore);
 ReactDOM.render(React.createElement(react_redux_1.Provider, {store: storeWisthMiddleware(index_1.default)}, 
-    React.createElement(react_router_1.Router, {history: react_router_1.browserHistory, routes: routes_1.Routes})
+    React.createElement(react_router_1.Router, {history: react_router_1.hashHistory, routes: routes_1.Routes})
 ), document.querySelector("#app"));
 //# sourceMappingURL=index.js.map

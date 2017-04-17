@@ -1,6 +1,4 @@
-﻿/// <reference path="../../models/stock/stock.ts" />
-/// <reference path="../../components/async-component/async-component.tsx" />
-// A '.tsx' file enables JSX support in the TypeScript compiler, 
+﻿// A '.tsx' file enables JSX support in the TypeScript compiler, 
 // for more information see the following page on the TypeScript wiki:
 // https://github.com/Microsoft/TypeScript/wiki/JSX
 
@@ -11,6 +9,7 @@ import { AsyncComponent, IAsyncComponentState } from '../../components/async-com
 import { IYqlQuery } from '../../models/yqlplace/yqlplace';
 import { GetStockDetails } from '../../apis/stock/stock-details';
 import { IStock } from '../../models/stock/stock';
+import { ReactError } from '../../components/react-error-component/index';
 
 enum promiseType {
     google = 1,
@@ -66,18 +65,16 @@ export class AsyncComponentUsage extends React.Component<any, any>{
                                     );
                                 }
                                 if (childstate.error) {
-                                    return (<div className="col-md-12 text-center">
-                                        <div className="col-xs-12">
-                                            <i className="fa fa-exclamation-triangle fa-3x text-danger" aria-hidden="true"></i>
-                                        </div>
-                                        <span className="text-danger">
-                                            <b>Ohh Snap!!, Somthing Wrong Happen</b>
-                                        </span>
-                                        <br />
-                                        <span className="text-danger">
-                                            Dude! that stock! does not exist in Exhange NASDAQ- Error returned: {childstate.error}
-                                        </span>
-                                    </div>);
+                                    return (
+                                        <ReactError.Error>
+                                            <ReactError.Title>
+                                                Ohh Snap!!, Something Wrong Happen
+                                            </ReactError.Title>
+                                            <ReactError.Message>
+                                                Dude! that stock! does not exist in Exhange NASDAQ- Error returned: {childstate.error}
+                                            </ReactError.Message>
+                                        </ReactError.Error>
+                                        );
                                 }
                             }
                         }

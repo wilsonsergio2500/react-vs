@@ -13,7 +13,9 @@ import { ReactRepeatPage } from '../pages/react-repeat/react-repeat-page';
 import { AsyncComponent1Page } from '../pages/react-async/react-async1-page';
 import { AsyncComponent2Page } from '../pages/react-async/react-async2-page';
 import { ReactHttpPage } from '../pages/react-http/react-http-page';
-import { HomePage } from '../pages/home/home'
+import { HomePage } from '../pages/home/home';
+import { ReactErrorPage } from '../pages/react-error/react-error-page';
+import { UnitTestPage } from '../pages/unit-test/unit-test-page';
 
 export const Routes = (
     <Route path="/" component={App} >
@@ -24,11 +26,13 @@ export const Routes = (
         <Route path="reactshow" component={ReactShowPage} />
         <Route path="reactrepeat" component={ReactRepeatPage} />
         <Route path="loadingpanel" component={LoadingPanelPage} />
+        <Route path="reacterror" component={ReactErrorPage} />
         <Route path="loadingbutton" component={LoadingButtonPage} />
 
         <Route path="reactasync1" component={AsyncComponent1Page} />
         <Route path="reactasync2" component={AsyncComponent2Page} />
         <Route path="reacthttp" component={ReactHttpPage} />
+        <Route path="unittest" component={UnitTestPage} />
         
         
     </Route>

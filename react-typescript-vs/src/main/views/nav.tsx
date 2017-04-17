@@ -40,6 +40,11 @@ export class Nav extends React.Component<any, any>{
                     </Link>
                     </li>
                     <li className="nav-item">
+                        <Link to="/reacterror" className="nav-link">
+                            <i className="fa fa-fw fa-bolt"></i> React Error Panel
+                    </Link>
+                    </li>
+                    <li className="nav-item">
                         <Link to="/loadingbutton" className="nav-link">
                             <i className="fa fa-fw fa-bolt"></i> Loading Button
                         </Link>

@@ -29,8 +29,7 @@ var LoadingButtonComponentUsage = (function (_super) {
     };
     LoadingButtonComponentUsage.prototype.render = function () {
         var _this = this;
-        return (React.createElement("div", {className: "container"}, 
-            React.createElement("div", {className: ""}), 
+        return (React.createElement("div", {className: "row"}, 
             React.createElement("div", {className: "col-md-2"}, 
                 React.createElement(index_1.LoadingButton, {buttonClass: "btn btn-primary", type: "button", IsWorking: this.state.gotBusy, OnClick: function () { return _this.OnClick(); }}, 
                     React.createElement(index_1.BtnMesage, null, "Update"), 
