@@ -1,13 +1,13 @@
-﻿/// <reference path="../loading-panel-component/loadingpanelcomponent.tsx" />
-// A '.tsx' file enables JSX support in the TypeScript compiler, 
+﻿// A '.tsx' file enables JSX support in the TypeScript compiler, 
 // for more information see the following page on the TypeScript wiki:
 // https://github.com/Microsoft/TypeScript/wiki/JSX
 
 import * as React from 'react';
 import * as Promise from 'bluebird';
 
-import { AsyncComponent, IAsyncComponentProps, IAsyncComponentState } from './async-component'
-import { LoadingPanelComponent } from '../loading-panel-component/loadingpanelcomponent'
+import { AsyncComponent, IAsyncComponentProps, IAsyncComponentState } from './async-component';
+import { LoadingPanelComponent } from '../loading-panel-component/loadingpanelcomponent';
+import { ReactError } from '../react-error-component/index'
 
 interface IAsyncComponent2Props extends IAsyncComponentProps{
     onSuccess: (payLoad: any) => JSX.Element;
@@ -40,18 +40,17 @@ export class AsyncComponent2 extends React.Component<IAsyncComponent2Props, IAsy
 
     }
     onError(error: any) {
-        return (<div className="col-md-12 text-center">
-            <div className="col-xs-12">
-                <i className="fa fa-exclamation-triangle fa-3x text-danger" aria-hidden="true"></i>
-            </div>
-            <span className="text-danger">
-                <b>Ohh Snap!!, Somthing Wrong Happen</b>
-            </span>
-            <br />
-            <span className="text-danger">
-                Dude! that stock! does not exist in Exhange NASDAQ- Error returned: {error}
-            </span>
-        </div>);
+        return (
+            <ReactError.Error>
+                <ReactError.Title>
+                    Ohh Snap!!, Something Wrong Happen
+                 </ReactError.Title>
+                <ReactError.Message>
+                    Dude! that stock! does not exist in Exhange NASDAQ- Error returned: {error}
+                 </ReactError.Message>
+            </ReactError.Error>
+            
+        );
     }
     onLoading() {
         return (<LoadingPanelComponent>

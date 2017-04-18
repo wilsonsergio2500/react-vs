@@ -45,6 +45,11 @@ var Nav = (function (_super) {
                             " Loading Panel")
                     ), 
                     React.createElement("li", {className: "nav-item"}, 
+                        React.createElement(react_router_1.Link, {to: "/reacterror", className: "nav-link"}, 
+                            React.createElement("i", {className: "fa fa-fw fa-bolt"}), 
+                            " React Error Panel")
+                    ), 
+                    React.createElement("li", {className: "nav-item"}, 
                         React.createElement(react_router_1.Link, {to: "/loadingbutton", className: "nav-link"}, 
                             React.createElement("i", {className: "fa fa-fw fa-bolt"}), 
                             " Loading Button")

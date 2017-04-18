@@ -42,9 +42,6 @@
     <TypeScriptCompile Include="src\components-usage\async-component\test.tsx" />
     <TypeScriptCompile Include="src\components\async-component\async-component-2.tsx" />
     <TypeScriptCompile Include="src\components\async-component\async-component.tsx" />
-    <TypeScriptCompile Include="src\components\book-component\bookComponent.tsx" />
-    <TypeScriptCompile Include="src\components\book-detail-component\bookDetailComponent.tsx" />
-    <TypeScriptCompile Include="src\components\book-detail-component\view\book-detail-view.tsx" />
     <TypeScriptCompile Include="src\components\error-component\errorComponent.tsx" />
     <TypeScriptCompile Include="src\components\error-component\view\erro-view.tsx" />
     <TypeScriptCompile Include="src\components\loading-panel-component\loadingPanelComponent.tsx" />
@@ -71,8 +68,6 @@
     <TypeScriptCompile Include="src\main\views\nav.tsx" />
     <TypeScriptCompile Include="src\models\action\IActionProducer.ts" />
     <TypeScriptCompile Include="src\models\book\book-model.ts" />
-    <TypeScriptCompile Include="src\components\book-component\reducer\book-reducer.ts" />
-    <TypeScriptCompile Include="src\components\book-component\view\book-view.tsx" />
     <TypeScriptCompile Include="src\actions\book-detail-action.ts" />
     <TypeScriptCompile Include="src\index.tsx" />
     <TypeScriptCompile Include="src\main\App.tsx" />

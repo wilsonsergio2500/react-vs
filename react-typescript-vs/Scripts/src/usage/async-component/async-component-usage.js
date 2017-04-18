@@ -1,5 +1,3 @@
-/// <reference path="../../models/stock/stock.ts" />
-/// <reference path="../../components/async-component/async-component.tsx" />
 // A '.tsx' file enables JSX support in the TypeScript compiler, 
 // for more information see the following page on the TypeScript wiki:
 // https://github.com/Microsoft/TypeScript/wiki/JSX
@@ -13,6 +11,7 @@ var React = require('react');
 var loadingpanelcomponent_1 = require('../../components/loading-panel-component/loadingpanelcomponent');
 var async_component_1 = require('../../components/async-component/async-component');
 var stock_details_1 = require('../../apis/stock/stock-details');
+var index_1 = require('../../components/react-error-component/index');
 var promiseType;
 (function (promiseType) {
     promiseType[promiseType["google"] = 1] = "google";
@@ -71,15 +70,9 @@ var AsyncComponentUsage = (function (_super) {
                         ));
                     }
                     if (childstate.error) {
-                        return (React.createElement("div", {className: "col-md-12 text-center"}, 
-                            React.createElement("div", {className: "col-xs-12"}, 
-                                React.createElement("i", {className: "fa fa-exclamation-triangle fa-3x text-danger", "aria-hidden": "true"})
-                            ), 
-                            React.createElement("span", {className: "text-danger"}, 
-                                React.createElement("b", null, "Ohh Snap!!, Somthing Wrong Happen")
-                            ), 
-                            React.createElement("br", null), 
-                            React.createElement("span", {className: "text-danger"}, 
+                        return (React.createElement(index_1.ReactError.Error, null, 
+                            React.createElement(index_1.ReactError.Title, null, "Ohh Snap!!, Something Wrong Happen"), 
+                            React.createElement(index_1.ReactError.Message, null, 
                                 "Dude! that stock! does not exist in Exhange NASDAQ- Error returned: ", 
                                 childstate.error)));
                     }

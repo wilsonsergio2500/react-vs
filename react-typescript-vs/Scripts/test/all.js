@@ -7,4 +7,5 @@
 require('./spec/components/loading-panel-component/loading-panel-component-test');
 require('./spec/components/react-show-component/react-show-component-test');
 require('./spec/components/loading-button-component/loading-button-component-test');
+require('./spec/components/async-component/async-component-test');
 //# sourceMappingURL=all.js.map

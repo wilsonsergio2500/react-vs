@@ -14,8 +14,7 @@ var ReactErrorTitle = (function (_super) {
         _super.apply(this, arguments);
     }
     ReactErrorTitle.prototype.render = function () {
-        return;
-        (React.createElement("span", {className: "text-danger"}, 
+        return (React.createElement("span", {className: "text-danger"}, 
             React.createElement("b", null, this.props.children)
         ));
     };
