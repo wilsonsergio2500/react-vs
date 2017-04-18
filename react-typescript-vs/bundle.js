@@ -48466,7 +48466,7 @@
 	    function Nav(props) {
 	        var _this = _super.call(this, props) || this;
 	        _this.state = {
-	            async: { open: false }
+	            async: { open: true }
 	        };
 	        return _this;
 	    }
@@ -54986,7 +54986,6 @@
 /* 600 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/// <reference path="../loading-panel-component/loadingpanelcomponent.tsx" />
 	// A '.tsx' file enables JSX support in the TypeScript compiler, 
 	// for more information see the following page on the TypeScript wiki:
 	// https://github.com/Microsoft/TypeScript/wiki/JSX
@@ -55005,6 +55004,7 @@
 	var React = __webpack_require__(1);
 	var async_component_1 = __webpack_require__(554);
 	var loadingpanelcomponent_1 = __webpack_require__(298);
+	var index_1 = __webpack_require__(595);
 	var AsyncComponent2 = (function (_super) {
 	    __extends(AsyncComponent2, _super);
 	    function AsyncComponent2(props) {
@@ -55023,13 +55023,9 @@
 	        });
 	    };
 	    AsyncComponent2.prototype.onError = function (error) {
-	        return (React.createElement("div", { className: "col-md-12 text-center" },
-	            React.createElement("div", { className: "col-xs-12" },
-	                React.createElement("i", { className: "fa fa-exclamation-triangle fa-3x text-danger", "aria-hidden": "true" })),
-	            React.createElement("span", { className: "text-danger" },
-	                React.createElement("b", null, "Ohh Snap!!, Somthing Wrong Happen")),
-	            React.createElement("br", null),
-	            React.createElement("span", { className: "text-danger" },
+	        return (React.createElement(index_1.ReactError.Error, null,
+	            React.createElement(index_1.ReactError.Title, null, "Ohh Snap!!, Something Wrong Happen"),
+	            React.createElement(index_1.ReactError.Message, null,
 	                "Dude! that stock! does not exist in Exhange NASDAQ- Error returned: ",
 	                error)));
 	    };
@@ -82958,6 +82954,7 @@
 	})();
 	Object.defineProperty(exports, "__esModule", { value: true });
 	var React = __webpack_require__(1);
+	var react_router_1 = __webpack_require__(206);
 	var HomePage = (function (_super) {
 	    __extends(HomePage, _super);
 	    function HomePage() {
@@ -83021,7 +83018,12 @@
 	                    React.createElement("div", { className: "panel-heading" }, "Forget It!..., Just Show me The Code!"),
 	                    React.createElement("div", { className: "panel-body" },
 	                        "All the component examples could be found in my codepen.io @ \u00A0",
-	                        React.createElement("a", { href: "https://codepen.io/wilsonsergio2500/", target: "_blank" }, "https://codepen.io/wilsonsergio2500/"))))));
+	                        React.createElement("a", { href: "https://codepen.io/wilsonsergio2500/", target: "_blank" }, "https://codepen.io/wilsonsergio2500/")))),
+	            React.createElement("div", { className: "col-md-12" },
+	                React.createElement("div", { className: "panel panel-default" },
+	                    React.createElement("div", { className: "panel-heading" }, "Show me the Test"),
+	                    React.createElement("div", { className: "panel-body" },
+	                        React.createElement(react_router_1.Link, { to: "/unittest", className: "btn btn-primary" }, "Check Unit Test"))))));
 	    };
 	    return HomePage;
 	}(React.Component));
