@@ -1,4 +1,5 @@
-﻿// A '.tsx' file enables JSX support in the TypeScript compiler, 
+﻿/// <reference path="../pages/react-quote/react-quote-page.tsx" />
+// A '.tsx' file enables JSX support in the TypeScript compiler, 
 // for more information see the following page on the TypeScript wiki:
 // https://github.com/Microsoft/TypeScript/wiki/JSX
 
@@ -15,6 +16,7 @@ import { AsyncComponent2Page } from '../pages/react-async/react-async2-page';
 import { ReactHttpPage } from '../pages/react-http/react-http-page';
 import { HomePage } from '../pages/home/home';
 import { ReactErrorPage } from '../pages/react-error/react-error-page';
+import { ReactQuotePage } from '../pages/react-quote/react-quote-page';
 import { UnitTestPage } from '../pages/unit-test/unit-test-page';
 
 export const Routes = (
@@ -29,9 +31,12 @@ export const Routes = (
         <Route path="reacterror" component={ReactErrorPage} />
         <Route path="loadingbutton" component={LoadingButtonPage} />
 
+        <Route path="reactquote" component={ReactQuotePage} />
+
         <Route path="reactasync1" component={AsyncComponent1Page} />
         <Route path="reactasync2" component={AsyncComponent2Page} />
         <Route path="reacthttp" component={ReactHttpPage} />
+        
         <Route path="unittest" component={UnitTestPage} />
         
         

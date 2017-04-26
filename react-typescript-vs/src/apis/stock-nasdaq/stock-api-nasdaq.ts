@@ -5,7 +5,7 @@ import { IActionProducer } from "../../models/action/iactionproducer";
 
 export function GetStockPrice(ticket: string){
     let key = 'AIzaSyABDmm3x6LCQohwMZ7rp4FlyCuXHUIZ4gY';
-    let url = `https://crossorigin.me/https://www.google.com/finance/info?q=NASDAQ:${ticket}&key=${key}`;
+    let url = `https://www.google.com/finance/info?q=NASDAQ:${ticket}&key=${key}`;
 
     return axios.get(url).then((r) => {
         // becuase payload bellow was an string..

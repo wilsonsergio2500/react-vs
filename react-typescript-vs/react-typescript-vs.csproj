@@ -56,6 +56,7 @@
     <TypeScriptCompile Include="src\components\react-error-component\react-error-title\react-error-title.tsx" />
     <TypeScriptCompile Include="src\components\react-error-component\react-error.tsx" />
     <TypeScriptCompile Include="src\components\react-http\react-http-component.tsx" />
+    <TypeScriptCompile Include="src\components\react-quote\react-quote-component.tsx" />
     <TypeScriptCompile Include="src\components\react-show-component\ReactShow.tsx" />
     <TypeScriptCompile Include="src\components\repeater-component\reactRepeaterComponent.tsx" />
     <TypeScriptCompile Include="src\components\stock-component\stockComponent.tsx" />
@@ -82,6 +83,7 @@
     <TypeScriptCompile Include="src\pages\react-async\react-async2-page.tsx" />
     <TypeScriptCompile Include="src\pages\react-error\react-error-page.tsx" />
     <TypeScriptCompile Include="src\pages\react-http\react-http-page.tsx" />
+    <TypeScriptCompile Include="src\pages\react-quote\react-quote-page.tsx" />
     <TypeScriptCompile Include="src\pages\react-repeat\react-repeat-page.tsx" />
     <TypeScriptCompile Include="src\pages\react-show\react-show.tsx" />
     <TypeScriptCompile Include="src\pages\unit-test\unit-test-page.tsx" />
